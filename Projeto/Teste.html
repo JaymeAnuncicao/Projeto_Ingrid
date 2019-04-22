@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <input type="range" id="percent" name="rangeInput" oninput="mostrarPorcentagem(this.value)" min="50" max="10000" onchange="updateTextInput(this.value);">
+        <span id="exibePercent">0</span>
+        <br>
+        <input type="text" id="textInput" class="dinheiro" oninput="mostrarPorcentagem(this.value)">
+    </body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>  
+    
+    <script>
+        // Exibe o valor do Range ao lado
+        function mostrarPorcentagem(novoValor) {
+            document.getElementById("exibePercent").innerHTML = novoValor;
+        }
+
+        // Máscara
+        $('.dinheiro').mask('#.##0,00', {reverse: true});
+
+        // Mexer no Range muda o input
+        function updateTextInput(val) {
+            document.getElementById('textInput').value=val; 
+        }
+
+    </script>
+
+</html>

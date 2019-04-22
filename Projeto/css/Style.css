@@ -1,0 +1,78 @@
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  background-color: #fff;
+}
+
+.line{
+  background-color: #00B922;
+  width: 30vw;
+  height: .1vh;
+  position: relative;
+  left: -25.5vw;
+}
+
+.simulador{
+  width: 100%;
+  margin-top: 5%;
+}  
+.simulador h4 {
+  font-size: 30px;
+  color: yellow;
+}
+.text-size{font-size: 30px;}
+.text-size-sub{font-size: 23px;}
+.text-size-sub-01{color: gray;font-size: 18px;}
+.text-dis{color: #00B922;}
+.arco{
+  border: solid 10px rgb(18, 132, 224);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  align-self: center;
+  display: grid;
+}
+/* .parallax{background-attachment: fixed;background-image: url('../images/fotovoltaica1.jpg');background-repeat: no-repeat;background-position-x: right;background-size: 50%;} */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.porcent{
+  position: relative;
+  top: 15px;
+  left: 25px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00B922;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00B922;
+  cursor: pointer;
+}
+
+.resultado{
+  background-color: gray;
+  width: 100%;
+
+}
