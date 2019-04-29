@@ -22,6 +22,7 @@ body {
 .text-size{font-size: 30px;}
 .text-size-sub{font-size: 23px;}
 .text-size-sub-01{color: gray;font-size: 18px;}
+.text-size-sub02{font-size: 20px;color: #001868}
 .text-dis{color: #00B922;}
 .arco{
   border: solid 10px rgb(18, 132, 224);
