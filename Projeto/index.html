@@ -14,44 +14,44 @@
   <!-- SEÇÃO DO RANGER -->
   <section id="ranger">
     <div class="simulador container">
-      <p class="text-size">SIMULE SUA <b class="text-dis">ECONOMIA</b></p>
+      <p class="text-size text-size1">SIMULE SUA <b class="text-dis">ECONOMIA</b></p>
       <hr noshade class="line">
       <div class="row mt-5">
-        <div class="col-md-8 mt-2">
-
+        <div class="col-md-5 mt-2 mr-5">
           <p class="text-size-sub"><b>Gasto médio mensal com energia:</b></p>
           <input type="range" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content"
             class="slider" id="percent" name="rangeInput" oninput=" mostrarCalculo(this.value), mostrarPorcentagem(this.value)" min="25" max="10000"
             value="25" onchange="updateTextInput(this.value);">
           <p class="text-size-sub-01">Valor médio de sua conta de luz: R$ <span id="exibePercent">0</span></p>
           <div class="container">
-            <div class="input-group col-md-6">
+            <div class="input-group col-md-8">
               <div class="input-group-text">Valor: R$</div>
               <input type="text" maxlength="9" id="textInput" class="dinheiro form-control"
                 onchange="mostrarPorcentagem(this.value), mostrarCalculo(this.value)" onkeypress="mascara(this,mreais)">
             </div>
             <div class="row pt-5 mt-5 row-mode">
-              <div class="row justify-content-center">
-                <div class="col-md-4 mr-5">
-                  <h5 class="arco">
-                    <p class="porcent">Até<br>90%</p>
-                  </h5>
-                  <h6 class="h6-mode">ECONOMICO</h6>
+                <div class="progress blue">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <p class="progress-value">Até 90%</p>
                 </div>
-              </div>
-              <div class="col-md-5 ml-5">
+              <div class="col-md-6 ml-5">
                 <p class="text-size-sub-01">Em 25 anos, seu sistema será capaz de gerar uma economia de:</p>
                 <p class="text-dis text-size">R$ <span id="calculo">0,00</span> </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-4 ">
+        <div class="col-6 ">
           <div class="row justify-content-center">
-            <p class="text-size-sub02">Economia é para todos inclusive você!</p>
+            <p class="text-size-sub02 text-center">Economia é para todos inclusive você!</p>
           </div>
 
-          <img src="images/fotovoltaica.jpeg" class="parallax" alt="FOTOVOLTAICA" width="400">
+          <img src="images/fotovoltaica.jpeg" class="img01" alt="FOTOVOLTAICA" width="400">
         </div>
       </div>
     </div>

@@ -1,79 +1,151 @@
-body {
-  /* font-family: 'Open Sans', sans-serif; */
-  background-color: #fff;
-}
+body {background-color: #fff;}
 
-.line{
-  background-color: #00B922;
-  width: 30vw;
-  height: .1vh;
-  position: relative;
-  left: -25.5vw;
-}
+.line{background-color: rgb(2, 167, 5);width: 25vw;height: .1vh;position: relative;left: -22.5vw;}
 
-.simulador{
-  width: 100%;
-  margin-top: 5%;
-}  
-.simulador h4 {
-  font-size: 30px;
-  color: yellow;
-}
+.simulador{width: 100%;margin-top: 5%;}  
+.simulador h4 {font-size: 30px;color: rgb(253, 169, 0);}
 .text-size{font-size: 30px;}
+.text-size1{color: #001868;}
 .text-size-sub{font-size: 23px;}
 .text-size-sub-01{color: gray;font-size: 18px;}
-.text-size-sub02{font-size: 20px;color: #001868}
-.text-dis{color: #00B922;}
-.arco{
-  border: solid 10px rgb(18, 132, 224);
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  align-self: center;
-  display: grid;
-}
-/* .parallax{background-attachment: fixed;background-image: url('../images/fotovoltaica1.jpg');background-repeat: no-repeat;background-position-x: right;background-size: 50%;} */
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-.porcent{
+.text-size-sub02{font-size: 30px;color: #001868;}
+.text-dis{color: rgb(2, 167, 5);}
+.img01{width: 30vw;margin-left: 2vw;}
+.arco{border: solid 10px rgb(18, 132, 224);height: 100px;width: 100px;border-radius: 50%;align-self: center;display: grid;}
+.slider {-webkit-appearance: none;width: 30vw;height: .9vh;border-radius: 5px;background: #d3d3d3;outline: none;opacity: 0.7;-webkit-transition: .2s;transition: opacity .2s;}
+.porcent{position: relative;top: 15px;left: 25px;}
+
+.slider:hover {opacity: 1;}
+
+.slider::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 15px;height: 15px;border-radius: 50%;background: rgb(2, 167, 5);cursor: pointer;}
+
+.slider::-moz-range-thumb {width: 25px;height: 25px;border-radius: 50%;background: rgb(2, 167, 5);cursor: pointer;}
+
+.resultado{background-color: gray;width: 100%;}
+.progress{
+  width: 130px;
+  height: 130px;
+  line-height: 50px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
   position: relative;
-  top: 15px;
-  left: 25px;
 }
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #00B922;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #00B922;
-  cursor: pointer;
-}
-
-.resultado{
-  background-color: gray;
+.progress:after{
+  content: "";
   width: 100%;
-
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.5s linear forwards;
+}
+.progress .progress-value{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #000000;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: -5%;
+  left: 5%;
+}
+.progress.blue .progress-bar{
+  border-color: rgb(253, 169, 0);
+}
+.progress.blue .progress-left .progress-bar{
+  animation: loading-2 1s linear forwards 1.5s;
+}
+@keyframes loading-1{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+}
+@keyframes loading-2{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+  }
+}
+@keyframes loading-3{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+@keyframes loading-4{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+  }
+}
+@keyframes loading-5{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(126deg);
+      transform: rotate(126deg);
+  }
 }
